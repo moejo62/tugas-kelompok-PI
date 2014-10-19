@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>7.13.2.1. Javascript Plugin - Typeahead Options Table</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <div class="container" >
+			<div class="row" style="margin-top:10px;">
+				<div class="span8" style="border:0px solid #bbb;border-radius:10px;padding:0px;margin:60px 0 20px 120px;">
+					
+						   <table class="table table-bordered table-striped">
+							  <thead>
+							   <tr>
+								 <th style="width: 100px;">Options</th>
+								 <th style="width: 50px;">Type</th>
+								 <th style="width: 100px;">Default</th>
+								 <th>Keterangan</th>
+							   </tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								 <td>source</td>
+								 <td>array, function</td>
+								 <td>[ ]</td>
+								 <td>Sumber data yang akan ditampilkan. Bisa berupa array bisa juga berupa fungsi. Funsgi memiliki dua argument,  nilai <code>query</code> dalam field input dan  <code>process</code> callback. Fungsi tersebut bisa digunakan secara synchronously dengan menampilkan sumber data secara langsung atau asynchronously melalui  argumen tunggal <code>process</code> callback.</td>
+							   </tr>
+							   <tr>
+								 <td>items</td>
+								 <td>number</td>
+								 <td>8</td>
+								 <td>Jumlah maksimum item yang akan ditampilkan pada dropdown.</td>
+							   </tr>
+							   <tr>
+								 <td>minLength</td>
+								 <td>number</td>
+								 <td>1</td>
+								 <td>Jumlah minimum panjang karakter yang diperlukan sebelum memicu fitur autocomplete. </td>
+							   </tr>
+							   <tr>
+								 <td>matcher</td>
+								 <td>function</td>
+								 <td>case insensitive</td>
+								 <td>Metode yang digunakan untuk menentukan apakah sebuah query sesuai dengan sebuah item. Menerima argumen tunggal <code>item</code> untuk menguji query. Memanggil query dengan <code>this.query</code>. Menghasilkan boolean <code>true</code> jika query sesuai.</td>
+							   </tr>
+							   <tr>
+								 <td>sorter</td>
+								 <td>function</td>
+								 <td>exact match,<br> case sensitive,<br> case insensitive</td>
+								 <td>Metode yang digunakan untuk mengurutkan hasil dari autocomplete. Menerima argumen tunggal <code>items</code>. Merujuk ke query dengan <code>this.query</code>.</td>
+							   </tr>
+							   <tr>
+								 <td>updater</td>
+								 <td>function</td>
+								 <td>returns selected item</td>
+								 <td>Metode yang digunakan untuk menampilkan item terpilih. Menerima argumen tunggal <code>item</code>.</td>
+							   </tr>
+							   <tr>
+								 <td>highlighter</td>
+								 <td>function</td>
+								 <td>highlights all default matches</td>
+								 <td>Metode yang digunakan untuk menyorot hasil autocomplete. mempunyai argumen tunggal <code>item</code>.</td>
+							   </tr>
+							  </tbody>
+							</table>
+				
+				
+				</div><!-- span6 container -->
+			</div>
+			
+        </div>
+		
+   	  <script src="js/jquery.js"></script>
+      <!-- Bootstrap javascript -->
+      <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
